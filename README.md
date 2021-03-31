@@ -1,9 +1,9 @@
 # Stock API Rails
 
 ## Research
-* (build api)[https://www.digitalocean.com/community/tutorials/build-a-restful-json-api-with-rails-5-part-one]
-* (migrations)[https://stackify.com/rails-migration-a-complete-guide/]
-* (rspec rails)[https://github.com/rspec/rspec-rails]
+* [build api](https://www.digitalocean.com/community/tutorials/build-a-restful-json-api-with-rails-5-part-one)
+* [migrations](https://stackify.com/rails-migration-a-complete-guide/)
+* [rspec rails](https://github.com/rspec/rspec-rails)
 
 
 # README
