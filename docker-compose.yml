@@ -1,0 +1,47 @@
+version: '3'
+services:
+  app:
+    build:
+      context: ./
+    ports:
+      - '3000:3000'
+      - '1234:1234'
+      - "26162:26162"
+    volumes:
+      - ./:/app
+      - ~/.ssh:/root/.ssh
+    tmpfs: 
+      - /app/tmp
+    #command: 'bundle exec rails server -b 0.0.0.0'
+    command: 'bundle exec rdebug-ide --debug --host 0.0.0.0 --port 1234 -- bin/rails s -p 3000 -b 0.0.0.0'
+    environment:
+      RAILS_ENV: development
+    stdin_open: true
+    tty: true
+    depends_on:
+      - db
+
+  redis:
+    image: redis
+    volumes:
+      - shared_data:/var/shared/redis
+    command: redis-server
+
+  db:
+    image: mysql:5
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD='yes'
+      - MYSQL_ROOT_HOST=%
+      # - MYSQL_DATABASE=dummy_development
+      # - MYSQL_USER=root
+    expose:
+      - '3306'
+    ports:
+      - '3306:3306'
+    volumes:
+      - "db:/var/lib/mysql"
+      - ".:/docker-entrypoint-initdb.d"
+
+volumes:
+  db:
+  shared_data:
