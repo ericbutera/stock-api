@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_31_115235) do
+ActiveRecord::Schema.define(version: 2021_04_02_114935) do
 
   create_table "notes", force: :cascade do |t|
     t.string "note"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2021_03_31_115235) do
     t.string "ticker"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "cik"
   end
 
   add_foreign_key "notes", "stocks"
