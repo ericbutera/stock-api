@@ -7,9 +7,6 @@
     "editor.fontLigatures": true,
     "editor.tabSize": 4,
     "editor.detectIndentation": false,
-    "editor.rulers": [
-        120
-    ],
     "[ruby]": {
         "editor.tabSize": 2,
     }

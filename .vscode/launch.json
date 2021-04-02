@@ -5,32 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "rdebug-ide",
-            "type": "Ruby",
-            "request": "attach",
-            "remoteHost": "127.0.0.1",
-            "remotePort": "1234",
-            "remoteWorkspaceRoot": "${workspaceRoot}"
-        }
-        {
             "name": "Rails server",
             "type": "Ruby",
             "request": "launch",
             "program": "${workspaceRoot}/bin/rails",
             "args": [
                 "server"
-            ]
-        },
-        {
-            "name": "RSpec - all",
-            "type": "Ruby",
-            "request": "launch",
-            "program": "${workspaceRoot}/bin/bundle",
-            "args": [
-                "exec",
-                "rspec",
-                "-I",
-                "${workspaceRoot}"
             ]
         },
         {
@@ -44,6 +24,13 @@
                 "--format",
                 "doc"
             ]
+        },
+        {
+            "name": "RSpec - bin/rspec",
+            "type": "Ruby",
+            "request": "launch",
+            "program": "${workspaceRoot}/bin/rspec",
+            "args": []
         }
     ]
 }

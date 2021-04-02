@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+##
+# Stock API
 class StocksController < ApplicationController
   def index
     Resque.enqueue(EmailSender, params) # schedule job!
@@ -10,7 +14,7 @@ class StocksController < ApplicationController
     render json: @stock
   end
 
-  def create 
+  def create
     @stock = Stock.create! allowed
     render json: @stock, status: :created
   end
