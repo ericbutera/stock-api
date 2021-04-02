@@ -4,7 +4,7 @@
 # Stock API
 class StocksController < ApplicationController
   def index
-    Resque.enqueue(EmailSender, params) # schedule job!
+    # Resque.enqueue(EmailSender, params) # schedule job!
     @stocks = Stock.all
     render json: @stocks
   end
