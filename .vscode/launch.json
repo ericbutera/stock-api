@@ -26,7 +26,7 @@
             ]
         },
         {
-            "name": "RSpec - bin/rspec",
+            "name": "RSpec bin/rspec",
             "type": "Ruby",
             "request": "launch",
             "program": "${workspaceRoot}/bin/rspec",
