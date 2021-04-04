@@ -1,0 +1,6 @@
+FetchFilingsJob:
+  description: "Fetch EDGAR filings"
+  queue: fetch_filings_queue
+  every:
+    - '30s'
+
