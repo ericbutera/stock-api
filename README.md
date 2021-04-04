@@ -9,6 +9,8 @@
     * edgar insider filings
     * add stock/ticker/company 
       * there will be lots of changes here as more data gets added
+  * rubocop
+  * RSpec all the things
 
 ## Testing
 * [resque_spec](https://github.com/leshill/resque_spec)
@@ -24,6 +26,8 @@
 
 * [resque dashboard](http://localhost:3000/resque/overview )
 * Run workers `QUEUE=* rake resque`
+* https://github.com/bblimke/webmock
+* https://thoughtbot.com/blog/how-to-stub-external-services-in-tests
 
 ## EDGAR
 * [CIK lookup](https://www.sec.gov/edgar/searchedgar/cik.htm)
@@ -38,7 +42,10 @@
         * link href=url
         * title
         * updated
+ * https://www.sec.gov/files/company_tickers.json
 
+## Questions for later
+* https://github.com/rbenv/rbenv or rvm?
 
 # README
 
@@ -64,3 +71,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+

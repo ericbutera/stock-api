@@ -17,10 +17,8 @@
             "name": "RSpec - doc",
             "type": "Ruby",
             "request": "launch",
-            "program": "${workspaceRoot}/bin/bundle",
+            "program": "${workspaceRoot}/bin/rspec",
             "args": [
-                "exec",
-                "rspec",
                 "--format",
                 "doc"
             ]
@@ -31,6 +29,15 @@
             "request": "launch",
             "program": "${workspaceRoot}/bin/rspec",
             "args": []
-        }
+        },
+        {
+            "name": "RSpec bin/rspec file",
+            "type": "Ruby",
+            "request": "launch",
+            "program": "${workspaceRoot}/bin/rspec",
+            "args": [
+                "${relativeFile}"
+            ]
+        },
     ]
 }

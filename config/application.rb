@@ -38,5 +38,8 @@ module StockApi
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # TODO: is this necessary?
+    # Resque.schedule = YAML.load_file(Rails.root.join('config', 'resque_schedule.yml'))
   end
 end

@@ -6,4 +6,7 @@ class ApplicationJob < ActiveJob::Base
 
   # Most jobs are safe to ignore if the underlying records are no longer available
   # discard_on ActiveJob::DeserializationError
+
+  # TODO: is this needed?
+  # self.queue_adapter = :resque
 end

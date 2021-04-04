@@ -32,6 +32,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'debase'
+  gem 'webmock'
   gem 'rspec-rails', '~> 4.1.0'
 end
 
@@ -51,6 +52,7 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_bot_rails', '~> 4.0'
   gem 'faker'
+  gem 'resque_spec'
   gem 'shoulda-matchers', '~> 4.5.1'
 end
 
@@ -60,3 +62,4 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # gem 'sidekiq'
 gem 'redis'
 gem 'resque', require: 'resque/server'
+gem 'resque-scheduler'

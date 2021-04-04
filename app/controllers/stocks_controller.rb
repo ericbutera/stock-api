@@ -4,9 +4,15 @@
 # Stock API
 class StocksController < ApplicationController
   def index
-    # Resque.enqueue(EmailSender, params) # schedule job!
+    Resque.enqueue(EmailSenderJob, params)
     @stocks = Stock.all
     render json: @stocks
+  end
+
+  def fetch
+    Resque.enqueue(FetchJob, params[:id])
+    # Resque.enqueue(EmailSenderJob, "from fetch")
+    render json: 'Fetched filings'
   end
 
   def show
@@ -22,7 +28,7 @@ class StocksController < ApplicationController
   def update
     @stock = Stock.find params[:id]
     @stock.update stock_params
-    render json: "Updated <#{id}>"
+    render json: "Updated <#{@stock.id}>"
   end
 
   def destroy
